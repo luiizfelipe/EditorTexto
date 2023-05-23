@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicial));
             menuTopo = new MenuStrip();
             arquivMenu = new ToolStripMenuItem();
             novoToolStripMenuItem = new ToolStripMenuItem();
@@ -39,13 +40,15 @@
             imprimirToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             sairToolStripMenuItem = new ToolStripMenuItem();
+            ajudaToolStripMenuItem = new ToolStripMenuItem();
+            sobreToolStripMenuItem = new ToolStripMenuItem();
             texto = new TextBox();
             menuTopo.SuspendLayout();
             SuspendLayout();
             // 
             // menuTopo
             // 
-            menuTopo.Items.AddRange(new ToolStripItem[] { arquivMenu });
+            menuTopo.Items.AddRange(new ToolStripItem[] { arquivMenu, ajudaToolStripMenuItem });
             menuTopo.Location = new Point(0, 0);
             menuTopo.Name = "menuTopo";
             menuTopo.Size = new Size(800, 24);
@@ -62,61 +65,75 @@
             // novoToolStripMenuItem
             // 
             novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            novoToolStripMenuItem.Size = new Size(180, 22);
+            novoToolStripMenuItem.Size = new Size(150, 22);
             novoToolStripMenuItem.Text = "Novo";
             novoToolStripMenuItem.Click += novoToolStripMenuItem_Click;
             // 
             // novaJanelaToolStripMenuItem
             // 
             novaJanelaToolStripMenuItem.Name = "novaJanelaToolStripMenuItem";
-            novaJanelaToolStripMenuItem.Size = new Size(180, 22);
+            novaJanelaToolStripMenuItem.Size = new Size(150, 22);
             novaJanelaToolStripMenuItem.Text = "Nova Janela";
             novaJanelaToolStripMenuItem.Click += novaJanelaToolStripMenuItem_Click;
             // 
             // abrirToolStripMenuItem
             // 
             abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            abrirToolStripMenuItem.Size = new Size(180, 22);
+            abrirToolStripMenuItem.Size = new Size(150, 22);
             abrirToolStripMenuItem.Text = "Abrir...";
             abrirToolStripMenuItem.Click += abrirToolStripMenuItem_Click;
             // 
             // salvarArquivo
             // 
             salvarArquivo.Name = "salvarArquivo";
-            salvarArquivo.Size = new Size(180, 22);
+            salvarArquivo.Size = new Size(150, 22);
             salvarArquivo.Text = "Salvar";
             salvarArquivo.Click += salvarArquivo_Click;
             // 
             // salvarComoToolStripMenuItem
             // 
             salvarComoToolStripMenuItem.Name = "salvarComoToolStripMenuItem";
-            salvarComoToolStripMenuItem.Size = new Size(180, 22);
+            salvarComoToolStripMenuItem.Size = new Size(150, 22);
             salvarComoToolStripMenuItem.Text = "Salvar Como...";
             salvarComoToolStripMenuItem.Click += salvarComoToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(147, 6);
             // 
             // imprimirToolStripMenuItem
             // 
             imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            imprimirToolStripMenuItem.Size = new Size(180, 22);
+            imprimirToolStripMenuItem.Size = new Size(150, 22);
             imprimirToolStripMenuItem.Text = "Imprimir";
             imprimirToolStripMenuItem.Click += imprimirToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(147, 6);
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Size = new Size(150, 22);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            ajudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { sobreToolStripMenuItem });
+            ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            ajudaToolStripMenuItem.Size = new Size(50, 20);
+            ajudaToolStripMenuItem.Text = "Ajuda";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            sobreToolStripMenuItem.Size = new Size(195, 22);
+            sobreToolStripMenuItem.Text = "Sobre o Editor de Texto";
+            sobreToolStripMenuItem.Click += sobreToolStripMenuItem_Click;
             // 
             // texto
             // 
@@ -134,6 +151,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(texto);
             Controls.Add(menuTopo);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuTopo;
             Name = "FormInicial";
             Text = "Form1";
@@ -157,5 +175,7 @@
         private ToolStripMenuItem imprimirToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripMenuItem sairToolStripMenuItem;
+        private ToolStripMenuItem ajudaToolStripMenuItem;
+        private ToolStripMenuItem sobreToolStripMenuItem;
     }
 }

@@ -1,3 +1,4 @@
+using EditorTexto.Forms;
 using System.Drawing.Printing;
 using System.Windows.Forms;
 
@@ -111,9 +112,14 @@ namespace EditorTexto
         {
             Font fonte = new Font("Arial", 12);
             int x = 100;
-            int y = 100;           
+            int y = 100;
             e.Graphics.DrawString(this.texto.Text, fonte, Brushes.Black, x, y);
         }
 
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSobre formularioSobre = new FormSobre();
+            formularioSobre.ShowDialog();
+        }
     }
 }
